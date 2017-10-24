@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/css?family=Signika:400,300,600,700);
+
+body {
+	font: lighter 20px "Signika";
+}
+
+svg {
+  float: left;
+	margin-top:25px;
+	padding-left: 220px;
+	font: lighter 20px "Signika";
+
+}
+
+p1 {
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 12px sans-serif;
+}
+
+.action_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1000px;
+  margin-left: 20px;
+}
+
+.action_button {
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 15pt;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.narrative {
+	float: right;
+	margin-top: 10px;
+	background-color: #F5F5DC;
+	width: 254px;
+	height: 760px;
+	display: flex;
+	opacity: 1;
+	font: "Signika";
+	border-radius: 10px;
+
+}
+
+#Bonds {
+  margin-left: 50px;
+  margin-right: 70px;
+}
+
+#Ruth {
+  margin-left: 50px;
+  margin-right: 70px;
+}
+
+#Aaron {
+  margin-left: 50px;
+  margin-right: 70px;
+}
+
+#Mays {
+  margin-left: 50px;
+  margin-right: 70px;
+}
+
+#Rodriguez {
+  margin-left: 50px;
+  margin-right: 70px;
+}
+
+#Home
+{
+	font-size: 14px;
+	margin-left: 50px;
+  margin-right: 140px;
+}
+
+
+
+
+
+ .mytooltip {
+  position:absolute;
+  text-align: center;
+	margin-top: 10px;
+	font-size: 30px;
+  width: 230px;
+  height:540px;
+  background-color: #F5F5DC;
+  border-radius: 10px;
+  color: #787777;
+  padding: 6px 12px;
+  z-index:3;
+
+}
+
+/*.mytool:after {
+  box-sizing: border-box;
+  display: inline;
+  width: 100%;
+  line-height: 1;
+  color: #EDE3D1;
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+  margin: -3px 0 0 0;
+  top: 100%;
+  left: 0; */
+}
+
+.mytool span {
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 900px;
+    margin: auto;
+  }
+
+
+}

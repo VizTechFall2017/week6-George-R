@@ -77,7 +77,9 @@ d3.csv('./incomeDataAllYears.csv', function(dataIn){
         .append('circle')
         .attr('class','w_dataPoints')
         .attr('r', 5)
-        .attr('fill', "lime");
+        .attr('fill', "lime")
+        .attr('data-toggle', 'tooltip')
+        .attr('title', function(d){return d.women});
 
     svg.selectAll('circles')
         .data(data2016)
@@ -85,7 +87,10 @@ d3.csv('./incomeDataAllYears.csv', function(dataIn){
         .append('circle')
         .attr('class','m_dataPoints')
         .attr('r', 5)
-        .attr('fill', "blue");
+        .attr('fill', "blue")
+        .attr('data-toggle', 'tooltip')
+        .attr('title', function(d){return d.women});
+          $('[data-toggle = "tooltip"]').tooltip()
 
     //call the drawPoints function below, and hand it the data2016 variable with the 2016 object array in it
     drawPoints(data2016);
