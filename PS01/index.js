@@ -14,7 +14,7 @@ var svg = d3.select('svg')
 var scaleX = d3.scaleBand().rangeRound([0, 800]).padding(0.1);
 var scaleY = d3.scaleLinear().range([400, 0]);
 
-var div = d3.select(".svg-container").append("div")
+var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
@@ -40,6 +40,7 @@ d3.csv('./shotdistteam.csv', function(dataIn){
         .attr('class','yaxis')
         .call(d3.axisLeft(scaleY));
 
+
 /*
     svg.append('text')
         .text('Weekly income by age and gender')
@@ -63,6 +64,7 @@ d3.csv('./shotdistteam.csv', function(dataIn){
         .append('rect')
         .attr('class','bars')
         .attr('fill', "darkorange");
+          $('#testRect').tooltip();
 
     //call the drawPoints function below, and hand it the data2016 variable with the 2016 object array in it
     drawPoints(loadData);
@@ -91,7 +93,12 @@ function drawPoints(pointData){
         })
         .attr('height',function(d){
             return 400 - scaleY(d.three);  //400 is the beginning domain value of the y axis, set above
-        });
+          })
+          .attr('data-toggle', 'tooltip')
+          .attr('title', function(d) {
+              return d.win;
+          });
+            $('[data-toggle="tooltip"]').tooltip();
 
 }
 
